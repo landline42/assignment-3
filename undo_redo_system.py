@@ -55,7 +55,7 @@ class Stack:
 
             #Iterate through the stack and print each node's value
             while current_node:
-                print(current_node.value)
+                print(f" - {current_node.value}")
 
                 current_node = current_node.next
 
