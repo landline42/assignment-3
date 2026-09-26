@@ -79,12 +79,18 @@ def run_undo_redo():
             action = input("Describe the action (e.g., Insert 'a'): ")
             # Push the action onto the undo stack and clear the redo stack
 
-            undo_stack.push(action)
+            if len(action) > 0:
+                undo_stack.push(action)
+                
+                redo_stack = Stack()
 
-            redo_stack = Stack()
+                print(f"Action performed: {action}")
+            
+            else:
+                print("Must enter an action.")
 
 
-            print(f"Action performed: {action}")
+            
         
         
         elif choice == "2":

@@ -1,0 +1,14 @@
+Design Memo
+
+1. Why is a stack the right choice for undo/redo?
+
+An undo function in a program will undo the most recently performed action first. A stack is the best choice for this functionality because stacks use a last-in, first-out order. The most recently performed action is stored at the top of the stack and will be the action that is accessed first when the undo function is called. The same principles apply to a redo function, except the most recently undone action will be stored at the top of the redo function stack. In contrast, using a queue would mean the oldest action is accessible first, which wouldn’t be very useful for an undo/redo function.
+
+2. Why is a queue better suited for the help desk?
+
+In a help desk, the first users in line are helped first. Since queues use a first-in, first-out order, this makes them suitable for help desk applications. The users who have been waiting the longest are helped first. A stack, on the other hand, would make the most recent user added to the line be helped first, which goes against how help desks should work in real life.
+
+
+3. How do your implementations differ from Python’s built-in lists?
+
+The stack and queue were implemented using classes rather than Python's built-in list objects. By using custom classes, I had direct control over the order in which objects were added and removed, and I was able to define how the stack and queue behave using functions. 
